@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+
+
+    <style>
+        input {
+  width: 60%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+input[type=submit] {
+  background-color: burlywood;
+  color: white
+}
+
+.container {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 4px;
+  width: 60%;
+} 
+
+.create {
+  background-color: burlywood;
+  color: white
+}
+.create {
+  width: 30%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+.log{
+            padding: 4px;
+            text-decoration: none;
+            background-color:black;
+            color: #fff;
+            border-radius: 10px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="login" method="post">
+            <label for="email">email</label><br>
+            <input type="text" name="email" placeholder="enter email"> <br>
+          <label for="usrname">Username</label> <br>
+          <input type="text" id="username" name="username" required  placeholder="Enter Name" title="username must be up to 8 words">
+            <br>      
+          <label for="psw">Password</label> <br>
+        <input type="password" id="psw" name="password" >
+           <br>
+          
+          <input type="submit" name="submit" value="Submit">
+        </form>
+      </div>
+      <h2>New Customers </h2>
+      <a href="{{ url_for ('sign_up') }}" class="log">Register with mimi today</a>
+
+
+           
+       
+      
+      
+<script>
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+}
+
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
+
+
+myInput.onkeyup = function() {
+  if(myInput.value.length <= 8) {
+    length.classlist.add('invalid');
+    length.classlist.remove('valid');
+} else{
+  length.classlist.add('valid');
+  length.classList.remove('invalid');
+}
+}
+</script>
+
+
+
+</body>
+</html>

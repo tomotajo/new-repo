@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>MiMi Stores: <a href="/">home</a></h3>
+    <a href="{{url_for ('sign_up') }}">sign up</a>
+    <a href="{{url_for ('login') }}">login</a>
+    <hr>
+    <div>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <b>{{ message }}</b>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+    {% block content %} {% endblock %} 
+                     
+</body>
+</html> 

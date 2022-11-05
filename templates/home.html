@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if caption %}
+    <title>{{ caption }}</title>
+    {% else %}
+    <title> welcome</title>
+    {% endif %}
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+    <h1>welcome {{name.username}}</h1>
+    {% for clas in clas %}
+    {{clas.author.username}} says <b>{{clas.post}}</b><br>
+    {% endfor %}
+    {% endblock %}
+    
+</body>
+</html>
